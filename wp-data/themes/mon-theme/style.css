@@ -1,0 +1,354 @@
+/*
+Theme Name: Mon Thème Personnalisé
+Theme URI: http://localhost:8000
+Author: Michael Tarei
+Author URI: https://github.com/00miK
+Description: Un thème WordPress personnalisé.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mon-theme
+Tags: responsive, custom, blog, minimal
+*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+/* Header */
+header {
+  background-color: #0f7ab5;
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+header h1 {
+  font-size: 2.2em;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  background-color: #0f7ab5;
+  text-align: center;
+  padding: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  transition: opacity 0.2s ease;
+}
+
+main.spa-loading {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Hero section - Accueil */
+.hero {
+  background: linear-gradient(135deg, #0f7ab5, #1e4fc2);
+  text-align: center;
+  padding: 80px 40px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #0f7ab5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.btn:hover {
+  background-color: #0c6a9e;
+}
+
+.btn-white {
+  background-color: white;
+  color: #0f7ab5;
+}
+
+.btn-white:hover {
+  background-color: #e0e0e0;
+}
+
+/* About section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 40px;
+}
+
+.about h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #0f7ab5;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Cards generiques */
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #0f7ab5;
+}
+
+.card-content h3 a {
+  color: #0f7ab5;
+  text-decoration: none;
+}
+
+.card-content h3 a:hover {
+  text-decoration: underline;
+}
+
+.card-content p {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Derniers articles - Accueil */
+.latest-posts {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.latest-posts h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #0f7ab5;
+}
+
+/* Blog */
+.blog-section {
+  text-align: center;
+}
+
+.blog-section h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.pagination a,
+.pagination span {
+  padding: 8px 16px;
+  background-color: #0f7ab5;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.pagination span.current {
+  background-color: #0c6a9e;
+}
+
+/* Services */
+.services-section {
+  text-align: center;
+}
+
+.services-section h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.services-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Contact */
+.contact-section {
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form-wrapper {
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact-form-wrapper label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea,
+.contact-form-wrapper select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.contact-form-wrapper textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form-wrapper input[type="submit"] {
+  background-color: #0f7ab5;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  width: auto;
+}
+
+.contact-form-wrapper input[type="submit"]:hover {
+  background-color: #0c6a9e;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  text-align: center;
+  padding: 25px;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Pages generiques */
+.page-content {
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+}

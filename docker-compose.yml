@@ -1,0 +1,42 @@
+services:
+  db:
+    image: mysql:8.0
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example_root_password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: example_password
+    networks:
+      - wordpress_network
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+    networks:
+      - wordpress_network
+
+  wordpress:
+    image: wordpress:latest
+    depends_on:
+      - db
+      - mailhog
+    ports:
+      - "8000:80"
+    volumes:
+      - ./wp-data:/var/www/html/wp-content
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: example_password
+      WORDPRESS_DB_NAME: wordpress
+    networks:
+      - wordpress_network
+
+volumes:
+  db_data:
+
+networks:
+  wordpress_network:
